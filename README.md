@@ -73,4 +73,5 @@
   * How to provide different configuration for different environments
     * Profiles: Environment specific configuration
     * see implementation: https://github.com/GongVictorFeng/springboot_intro/commit/d04878a861f3883067a1fa5e4935729388f880ce
+    
     ![managing configuration.png](assets%2Fmanaging%20configuration.png)
