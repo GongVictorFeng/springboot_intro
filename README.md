@@ -77,3 +77,47 @@
     * see implementation: https://github.com/GongVictorFeng/springboot_intro/commit/9d9a8e28667fa34c8ea07b8df4d9ee663994c47b
     
     ![managing configuration.png](assets%2Fmanaging%20configuration.png)
+
+## Spring Boot Embedded Servers
+  * Deploy application WAR Approach (Old)
+    * Step 1: Install Java
+    * Step 2: Install Web/Application Server
+      * Tomcat/WebSphere/WebLogic etc
+    * Step 3: Deploy the application WAR (Web ARchive)
+      * Complex to set up
+  * Embedded Server - Simpler alternative
+    * Step 1: Install Java
+    * Step 2: Run JAR file
+    * Make JAR not WAR (Credit: Josh Long!)
+    * Embedded Server Examples:
+      * spring-boot-starter-tomcat
+      * spring-boot-starter-jetty
+      * spring-boot-starter-undertow
+
+## Monitor Applications using Spring Boot Actuator
+  * Monitor and manage application in your production
+  * Provides a number of endpoints:
+    * beans - Complete list of Spring beans in app
+    * health - Application health information 
+    * metrics - Application metrics 
+    * mappings - Details around Request Mappings
+
+## Understanding Spring Boot vs Spring MVC vs Spring
+  * Spring Framework: Dependency Injection
+    * Defining dependencies (@Component)
+    * Identifying dependencies (Component Scan, etc)
+    * Autowiring them in (@Autowired)
+    * Just Dependency Injection is Not sufficient 
+      * Spring Modules and Spring projects: Extend Spring Eco System
+        * Provide good integration with other frameworks (hibernate/JPA, JUnit & Mockito for Unit Testing)
+  * Spring MVC (Spring Module): Simplify building web apps and REST API
+    * Building web applications with Struts was very complex
+    * @Controller, @RestController, @RequestMapping ("/courses")
+  * Spring Boot (Spring Project): Build PRODUCT-READY apps Quickly
+    * Starter Projects - Make it easy to build variety of applications
+    * Autoconfiguration - Eliminate configuration to setup Spring, Spring MVC and other framework
+    * Enable non functional requirements (NFRs):
+      * Actuator: Enables Advanced Monitoring of applications
+      * Embedded Server: No need for separate application servers
+      * Logging and Error Handling
+      * Profiles and Configuration Properties
